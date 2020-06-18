@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using KafkaElasticConsumer;
 
 namespace KafkaElasticConsumer.Main
 {
@@ -6,7 +7,8 @@ namespace KafkaElasticConsumer.Main
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            KafkaConsumer kafkaConsumer = new KafkaConsumer("127.0.0.1:9092", "first-csharp-app");
+            kafkaConsumer.Run();
         }
     }
 }
